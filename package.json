@@ -1,0 +1,20 @@
+{
+	"name": "markup-generator",
+	"version": "1.0.0",
+	"description": "HTML markup generator",
+	"default": "index.html",
+	"scripts": {
+		"dev": "parcel src/index.html",
+		"build": "parcel build src/index.html",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"parcel": "^2.3.2"
+	}
+}
