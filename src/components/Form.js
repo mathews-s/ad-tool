@@ -18,8 +18,8 @@ const Form = () => {
 	};
 
 	return (
-		<div>
-			<div>
+		<div className="columns">
+			<div className="column">
 				<form onSubmit={handleSubmit}>
 					<label>
 						<input
@@ -37,7 +37,7 @@ const Form = () => {
 							onChange={e => setData(e.target.value)}
 						/>
 					</label>
-					<input type="submit" value="Submit" />
+					<input className="button is-primary" type="submit" value="Submit" />
 				</form>
 			</div>
 			<Result result={result} />

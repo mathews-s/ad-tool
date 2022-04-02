@@ -4,7 +4,7 @@ const Result = ({ result }) => {
 	const markup = result ? `<div name="${name}" data-js-options="${data}"></div>` : '';
 
 	return (
-		<div>
+		<div className="column">
 			<textarea rows="4" cols="50" value={markup} readOnly></textarea>
 		</div>
 	);
