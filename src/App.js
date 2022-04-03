@@ -1,11 +1,19 @@
 import { render } from 'react-dom';
 import Form from './components/Form';
+import Clock from './components/Clock';
 
 const App = () => {
 	return (
-		<div>
-			<div className="title">My Markup Generator</div>
-			<Form />
+		<div className="container">
+			<section className="section hero is-primary ">
+				<div className="hero-body">
+					<p className="title">My Markup Generator</p>
+					<Clock />
+				</div>
+			</section>
+			<section className="section">
+				<Form />
+			</section>
 		</div>
 	);
 };
