@@ -3,59 +3,57 @@ import Result from './Result';
 
 const Form = () => {
 	const [cssClassName, setCssClassName] = useState('');
-	const [markUpId, setMarkupId] = useState('');
-	const [device, setDevice] = useState('');
 	const [unit, setUnit] = useState('');
 	const [result, setResult] = useState('');
+	const [property, setProperty] = useState('');
+	const [section, setSection] = useState('');
+	const [pageType, setPageType] = useState('');
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		setResult({ cssClassName, markUpId, device, unit });
+		const resultObject = {
+			cssClassName: 'advertisement__container',
+			unit,
+			property,
+			section,
+			pageType,
+		};
+		setResult(resultObject);
 		resetForm();
 	};
 
 	const resetForm = () => {
 		setCssClassName('');
-		setMarkupId('');
-		setDevice('');
 		setUnit('');
+		setProperty('');
+		setSection('');
+		setPageType('');
 	};
 
 	/**
 	 * Below could be anything
 	 */
-	const DEVICES = ['desktop', 'mobile', 'tablet'];
-	const UNITS = ['demo-1', 'demo-2', 'demo-3', 'demo-4'];
+	const UNITS = ['lb1', 'outstream1', 'imu1', 'outsream2', 'imu2', 'side1'];
+	const PROPERTIES = ['cna'];
+	const SECTIONS = ['brand_studio'];
+	const PAGES = ['landingpage', 'articlepage'];
 
 	return (
 		<div className="columns">
 			<div className="column">
 				<form onSubmit={handleSubmit}>
 					<div className="columns">
-						<div className="column">
+						<div className="column is-half">
 							<div className="field">
 								<label className="label">Classname</label>
 								<div className="control">
 									<input
 										className="input"
 										type="text"
-										placeholder="Define classname"
+										placeholder="advertisement__container"
 										value={cssClassName}
 										onChange={e => setCssClassName(e.target.value)}
-									></input>
-								</div>
-							</div>
-						</div>
-						<div className="column">
-							<div className="field">
-								<label className="label">ID</label>
-								<div className="control">
-									<input
-										className="input"
-										type="text"
-										value={markUpId}
-										placeholder="Define ID"
-										onChange={e => setMarkupId(e.target.value)}
+										disabled
 									></input>
 								</div>
 							</div>
@@ -64,20 +62,20 @@ const Form = () => {
 					<div className="columns">
 						<div className="column">
 							<div className="field">
-								<label className="label">Device</label>
+								<label className="label">Site</label>
 								<div className="control">
 									<div className="select">
 										<select
-											id="deviceInput"
-											value={device}
+											id="propertyInput"
+											value={property}
 											onChange={e => {
-												setDevice(e.target.value);
+												setProperty(e.target.value);
 											}}
 										>
 											<option />
-											{DEVICES.map(device => (
-												<option key={device} value={device}>
-													{device}
+											{PROPERTIES.map(property => (
+												<option key={property} value={property}>
+													{property}
 												</option>
 											))}
 										</select>
@@ -85,6 +83,31 @@ const Form = () => {
 								</div>
 							</div>
 						</div>
+						<div className="column">
+							<div className="field">
+								<label className="label">Section</label>
+								<div className="control">
+									<div className="select">
+										<select
+											id="sectionInput"
+											value={section}
+											onChange={e => {
+												setSection(e.target.value);
+											}}
+										>
+											<option />
+											{SECTIONS.map(section => (
+												<option key={section} value={section}>
+													{section}
+												</option>
+											))}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="columns">
 						<div className="column">
 							<div className="field">
 								<label className="label">Unit</label>
@@ -100,7 +123,30 @@ const Form = () => {
 											<option />
 											{UNITS.map(unit => (
 												<option key={unit} value={unit}>
-													{unit.toLocaleUpperCase()}
+													{unit}
+												</option>
+											))}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="column">
+							<div className="field">
+								<label className="label">Page Type</label>
+								<div className="control">
+									<div className="select">
+										<select
+											id="pageTypeInput"
+											value={pageType}
+											onChange={e => {
+												setPageType(e.target.value);
+											}}
+										>
+											<option />
+											{PAGES.map(page => (
+												<option key={page} value={page}>
+													{page}
 												</option>
 											))}
 										</select>
