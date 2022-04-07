@@ -7,7 +7,7 @@ const App = () => {
 		<div className="container">
 			<section className="section hero is-primary ">
 				<div className="hero-body">
-					<p className="title">My Markup Generator</p>
+					<p className="title">Ad Markup Generator</p>
 					<Clock />
 				</div>
 			</section>
