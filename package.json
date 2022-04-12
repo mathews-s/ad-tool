@@ -5,7 +5,7 @@
 	"default": "index.html",
 	"scripts": {
 		"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html",
+		"build": "parcel build src/index.html --public-url /ad-tool",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
