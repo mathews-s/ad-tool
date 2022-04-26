@@ -33,7 +33,7 @@ const Form = () => {
 	/**
 	 * Below could be anything
 	 */
-	const UNITS = ['lb1', 'outstream1', 'imu1', 'outsream2', 'imu2', 'side1'];
+	const UNITS = ['lb1', 'outstream1', 'imu1', 'outstream2', 'imu2', 'side1'];
 	const PROPERTIES = ['cna'];
 	const SECTIONS = ['brand_studio'];
 	const PAGES = ['landingpage', 'articlepage'];
