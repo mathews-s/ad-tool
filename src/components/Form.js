@@ -34,8 +34,8 @@ const Form = () => {
 	 * Below could be anything
 	 */
 	const UNITS = ['lb1', 'outstream1', 'imu1', 'outsream2', 'imu2', 'side1'];
-	const PROPERTIES = ['cna'];
-	const SECTIONS = ['brand_studio'];
+	const PROPERTIES = ['cna', 'today'];
+	const SECTIONS = ['brand_studio', 'brand_spotlight'];
 	const PAGES = ['landingpage', 'articlepage'];
 
 	return (
