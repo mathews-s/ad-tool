@@ -28,6 +28,8 @@ const Result = ({ result }) => {
 				adUnit4: dataAttribute.pageType,
 				adUnit5: 'na',
 				device: 'desktop',
+				prgads: 'False',
+				noad: 'False',
 				sizes: SIZES['desktop'][dataAttribute.unitType],
 			})
 		);
@@ -41,6 +43,8 @@ const Result = ({ result }) => {
 				adUnit4: dataAttribute.pageType,
 				adUnit5: 'na',
 				device: 'tablet',
+				prgads: 'False',
+				noad: 'False',
 				sizes: SIZES['tablet'][dataAttribute.unitType],
 			})
 		);
@@ -54,6 +58,8 @@ const Result = ({ result }) => {
 				adUnit4: dataAttribute.pageType,
 				adUnit5: 'na',
 				device: 'mobile',
+				prgads: 'False',
+				noad: 'False',
 				sizes: SIZES['mobile'][dataAttribute.unitType],
 			})
 		);
