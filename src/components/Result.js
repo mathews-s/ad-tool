@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { SIZES } from '../fixtures/sizes';
+import '../styles/togglebutton.css';
 
 const Result = ({ result }) => {
 	const { cssClassName, unit, property, section, pageType } = result;
@@ -121,9 +122,11 @@ const Result = ({ result }) => {
 			<label className="label">Markup Result</label>
 			<div className="field">
 				<div className="control">
-					<button className="button is-small" onClick={toggleParse}>
-						Parsed ? {!isParsed ? 'No' : 'Yes'}
-					</button>
+					<label className="mx-2">Parse js-options</label>
+					<label className="switch">
+						<input type="checkbox" onChange={toggleParse} />
+						<span className="slider round"></span>
+					</label>
 				</div>
 			</div>
 			<div className="field">

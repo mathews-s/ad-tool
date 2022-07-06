@@ -19,7 +19,6 @@ const Form = () => {
 			pageType,
 		};
 		setResult(resultObject);
-		resetForm();
 	};
 
 	const resetForm = () => {
@@ -157,6 +156,12 @@ const Form = () => {
 						</div>
 					</div>
 					<input className="button is-primary" type="submit" value="Generate" />
+					<input
+						className="button is-primary mx-1 is-normal"
+						value="Reset"
+						type="button"
+						onClick={resetForm}
+					/>
 				</form>
 			</div>
 			<Result result={result} />
