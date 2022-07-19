@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { SIZES } from '../fixtures/sizes';
+import { SIZES } from '../fixtures/properties';
+import { buildSiteName } from '../utilities/attributes';
 import '../styles/togglebutton.css';
 
 const Result = ({ result }) => {
@@ -12,7 +13,7 @@ const Result = ({ result }) => {
 	const DEVICES = ['desktop', 'mobile', 'tablet'];
 
 	const dataAttribute = {
-		parentAdUnit: property,
+		parentAdUnit: buildSiteName(String(property)),
 		unitType: unit,
 		section,
 		pageType,

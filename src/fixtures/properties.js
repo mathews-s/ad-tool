@@ -1,4 +1,8 @@
-const SIZES = {
+export const SITES = [
+	'CNA', 'CNA Lifestyle', 'CNA Luxury', 'Today', '8 World', '8 Days', 'Berita', 'Seithi' 
+];
+
+export const SIZES = {
 	desktop: {
 		lb1: [
 			[728, 90],
@@ -85,8 +89,4 @@ const SIZES = {
 			[320, 50],
 		],
 	},
-};
-
-module.exports = {
-	SIZES,
 };

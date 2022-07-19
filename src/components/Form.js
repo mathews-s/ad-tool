@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SITES } from '../fixtures/properties';
 import Result from './Result';
 
 const Form = () => {
@@ -33,8 +34,7 @@ const Form = () => {
 	 * Below could be anything
 	 */
 
-	const UNITS = ['lb1', 'outstream1', 'imu1', 'outsream2', 'imu2', 'lb2', 'side1'];
-	const PROPERTIES = ['cna', 'today'];
+	const UNITS = ['lb1', 'outstream1', 'imu1', 'outstream2', 'imu2', 'lb2', 'side1'];
 	const SECTIONS = ['brand_studio', 'brand_spotlight'];
 	const PAGES = ['landingpage', 'articlepage'];
 
@@ -73,7 +73,7 @@ const Form = () => {
 											}}
 										>
 											<option />
-											{PROPERTIES.map(property => (
+											{SITES.map(property => (
 												<option key={property} value={property}>
 													{property}
 												</option>
