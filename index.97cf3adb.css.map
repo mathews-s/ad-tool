@@ -1,1 +1,0 @@
-{"mappings":"AAAA,eACA,wBAAA,CACA,iBAAA,CAEA,gBAAA,CADA,eAEA","sources":["src/styles/Preview.css"],"sourcesContent":["#preview-panel{\r\n    border: 1px solid #48c78e;\r\n    border-radius: 4px;\r\n    padding-top: 5px;\r\n    padding-left: 5px;\r\n}"],"names":[],"version":3,"file":"index.97cf3adb.css.map"}
